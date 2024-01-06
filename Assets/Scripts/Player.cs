@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     {
         MovePlayer();
 
-        if(Input.GetKey(KeyCode.Space) && Time.time > canFire)
+        if (Input.GetKey(KeyCode.Space) && Time.time > canFire)
         {
             Fire();
         }
