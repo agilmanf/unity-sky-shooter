@@ -10,5 +10,17 @@ public class Missile : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.up * _speed * Time.deltaTime);
+        if (transform.position.y > 6)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "Enemy")
+        {
+            Destroy(gameObject);
+        }
     }
 }
